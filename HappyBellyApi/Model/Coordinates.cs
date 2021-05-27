@@ -11,6 +11,6 @@ namespace HappyBellyApi.Models
             Latitude = latitude;
             Longitude = longitude;
         }
-        public override string ToString() => $"({Latitude}, {Longitude})";
+        public override string ToString() => $"{Latitude},{Longitude}";
     }
 }
