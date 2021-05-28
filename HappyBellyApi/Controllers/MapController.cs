@@ -26,7 +26,7 @@ namespace HappyBellyApi.Controllers
         [HttpGet]
         public string Get()
         {
-            return "yolo";
+            return $"Maps provider: {_map.DataSourceName}";
         }
 
         // GET api/<MapController>/Mikolaja%20Reja

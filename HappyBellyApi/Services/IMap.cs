@@ -8,6 +8,7 @@ namespace HappyBellyApi.Services
 {
     public interface IMap
     {
+        public string DataSourceName { get; }
         Coordinates GetCoordinates(string address);
     }
 }

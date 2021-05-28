@@ -14,6 +14,8 @@ namespace HappyBellyApi.Services
         private readonly string _mapboxToken;
         public readonly IConfiguration _config;
 
+        public string DataSourceName => "Mapbox - mapbox.com";
+
         public Mapbox(IConfiguration configuration)
         {
             _config = configuration;
@@ -21,6 +23,19 @@ namespace HappyBellyApi.Services
         }
 
         public Coordinates GetCoordinates(string query)
+        {
+            var response = GetResponse(query);
+
+            //TODO
+
+            return new Coordinates
+            {
+                Latitude = 1.1d,
+                Longitude = 2.2d
+            };
+        }
+
+        private string GetResponse(string query)
         {
             string encodedSearchText = HttpUtility.UrlEncode(query);
 
@@ -33,11 +48,7 @@ namespace HappyBellyApi.Services
 
             //TODO
 
-            return new Coordinates
-            {
-                Latitude = 1.1d,
-                Longitude = 2.2d
-            };
+            return "eeeeee";
         }
     }
 }
