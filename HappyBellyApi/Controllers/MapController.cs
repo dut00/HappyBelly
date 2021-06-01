@@ -1,4 +1,5 @@
-﻿using HappyBellyApi.Services;
+﻿using HappyBellyApi.Models;
+using HappyBellyApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,9 @@ namespace HappyBellyApi.Controllers
 
         // GET api/<MapController>/Mikolaja%20Reja
         [HttpGet("{query}")]
-        public string Get(string query)
+        public Coordinates Get(string query)
         {
-            return _map.GetCoordinates(query).ToString();
+            return _map.GetCoordinates(query);
         }
     }
 }
